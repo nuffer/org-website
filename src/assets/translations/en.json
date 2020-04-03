@@ -1,6 +1,11 @@
 {
     "app": {
         "title": "Self report",
+        "countries": {
+            "ch": "Switzerland",
+            "in": "India",
+            "me": "Mexico"
+        },
         "footer": {
             "support": "Thank you for supporting us!",
             "contact": "Let's get in touch on any of these platforms.",
@@ -44,5 +49,10 @@
         "goalResponse": "We aim to provide a visualization of the progression of the Covid-19 pandemic in our country. How can we 'flatten the curve' without having a statistical idea of the current situation? Help us by publishing your health status.",
         "othersQuestion": "How do I report other members of my family?",
         "othersResponse": "We are working on this issue. For now, you can use a different devices (phones, tablet, computer) for each member of your family."
+    },
+    "home": {
+        "title": "Covid self report",
+        "subtitle": "The Open Source project that can help your countries",
+        "countryListTitle": "List of the country teams that have joined the project",
     }
 }

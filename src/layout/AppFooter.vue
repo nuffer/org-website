@@ -48,16 +48,12 @@
 
 <script>
 
-  const countries = require('@/assets/sites.json');
-
   export default {
     name: 'app-footer',
     data() {
       return {
         year: new Date().getFullYear(),
         version: process.env.VERSION,
-        countries: countries,
-        activeCountry: window.location.origin,
       }
     },
   };
