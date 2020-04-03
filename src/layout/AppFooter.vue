@@ -8,22 +8,6 @@
           <h4 class="mb-0 font-weight-light">{{ $t('app.footer.contact') }}</h4>
         </div>
         <div class="col-lg-6 text-lg-center btn-wrapper">
-          <a v-if="socialLinkWhatsapp" target="_blank" rel="noopener"
-             :href="`https://wa.me/?text=${$t('app.footer.whatsappshare')} ${socialLinkWhatsapp}`"
-             class="btn btn-neutral btn-icon-only btn-whatsapp btn-round btn-lg" data-toggle="tooltip"
-             data-original-title="Share">
-            <i class="fa fa-whatsapp"></i>
-          </a>
-          <a v-if="socialLinkInstagram" target="_blank" rel="noopener" :href="socialLinkInstagram"
-             class="btn btn-neutral btn-icon-only btn-instagram btn-round btn-lg" data-toggle="tooltip"
-             data-original-title="Follow us">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <a v-if="socialLinkFacebook" target="_blank" rel="noopener" :href="socialLinkFacebook"
-             class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip"
-             data-original-title="Like us">
-            <i class="fa fa-facebook-square"></i>
-          </a>
           <a v-if="socialLinkGithub" target="_blank" rel="noopener" :href="socialLinkGithub"
              class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip"
              data-original-title="Star us on Github">

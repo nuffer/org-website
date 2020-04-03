@@ -13,26 +13,22 @@
           <div class="col text-white">
             <h1 class="display-3 text-white">{{ $t('home.title') }}</h1>
             <h3 class="text-white">{{ $t(`home.subtitle`) }}</h3>
-            <p>{{ $t(`faq.goalResponse`, {disease: 'Covid-19'}) }}</p>
 
-            <h3 class="text-white">{{ $t(`faq.othersQuestion`, {disease: 'Covid-19'}) }}</h3>
-            <p>{{ $t(`faq.othersResponse`, {disease: 'Covid-19'}) }}</p>
+
 
             <div id="leaflet-map"></div>
 
-            <h3 class="text-white">{{ $t(`home.countryListTitle`) }}</h3>
-            <span v-for="country of countries" :key="country.code">
-              <span v-if="country.url !== activeCountry">
-                <span v-if="country.code !== countries[0].code">|</span>
-                <a :href="country.url" class="country">
-                  <img :src="`https://www.countryflags.io/${country.code}/flat/64.png`"
-                       :alt="`${country.code} flag`"
-                       target="_blank"
-                       class="flag ml-1"/>
-                  {{ $t(`app.countries.${country.code}`) }}
-                </a>
-              </span>
-            </span>
+            <h4 class="text-white">{{ $t(`home.countryListTitle`) }}</h4>
+
+              <base-button type="secondary" v-for="country of countries" :key="country.code">
+              <img :src="`https://www.countryflags.io/${country.code}/flat/32.png`"
+                   :alt="`${country.code} flag`"
+                   target="_blank"
+                   class="flag ml-1"/>
+                   <a :href="country.url" class="country">
+                   {{ $t(`app.countries.${country.code}`) }}
+                   </a>
+              </base-button>
 
           </div>
         </div>
@@ -47,11 +43,14 @@
   import 'leaflet/dist/leaflet.css';
   const countries = require('@/assets/sites.json');
 
+ var _map = null;
+
   export default {
-    name: "faq",
+    name: "home",
     components: {},
     data() {
       return {
+        mapBaseLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         countries: countries,
 
         mapCenterLatitude: process.env.VUE_APP_VISU_MAP_CENTER_LATITUDE,
@@ -87,5 +86,9 @@
 </script>
 
 <style scoped>
+
+.flag_column{
+  width: 70px;
+}
 
 </style>

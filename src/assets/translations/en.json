@@ -18,17 +18,25 @@
         "no": "No",
         "language": "English"
     },
-    "renewReport": {
-        "comingBack": "Thanks for coming back",
-        "daysSince": "It has been {days} days since your last report.",
-        "explainOther": "If you want to file a report for someone else, please use another phone, tablet or computer.",
-        "click": "Click",
-        "here": "here",
-        "ifNotYou": "if it wasn't you."
+    "home": {
+        "title": "Covid self report",
+        "subtitle": "The Open Source project that can help your countries",
+        "countryListTitle": "List of the country teams that have joined the project"
+    },
+    "news": {
+        "title": "News"
+    },
+    "press": {
+        "title": "Press",
+        "subtitle": "Articles related to the project",
+        "pressRelease": "Press release"
+    },
+    "partnerships": {
+        "title": "Partnership"
     },
     "about": {
         "title": "About us",
-        "headWho": "We are a team of swiss developers",
+        "headWho": "We are a team of developers",
         "who": "that want to help to evaluate the current situation of the COVID-19 pandemic in our country.",
         "headNeedYou": "We need you!",
         "needYou": "Our app is based on your self-reporting... so it is important that you update your health status in case of change.",
@@ -42,17 +50,5 @@
         "dataCare": " keep in mind that our dataset is based on self-reporting from the community, thus the data is not official and could contains errors. The data is only intended to be used as an indicator.",
         "headImprovement": "If you have any suggestions",
         "improvement": "for improvements or you want to report an error, please contact us on Facebook."
-    },
-    "faq": {
-        "title": "FAQ",
-        "goalQuestion": "What is the goal of this app?",
-        "goalResponse": "We aim to provide a visualization of the progression of the Covid-19 pandemic in our country. How can we 'flatten the curve' without having a statistical idea of the current situation? Help us by publishing your health status.",
-        "othersQuestion": "How do I report other members of my family?",
-        "othersResponse": "We are working on this issue. For now, you can use a different devices (phones, tablet, computer) for each member of your family."
-    },
-    "home": {
-        "title": "Covid self report",
-        "subtitle": "The Open Source project that can help your countries",
-        "countryListTitle": "List of the country teams that have joined the project",
     }
 }

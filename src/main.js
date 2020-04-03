@@ -23,10 +23,7 @@ import './registerServiceWorker'
 
 Vue.config.productionTip = false;
 
-Vue.prototype.socialLinkWhatsapp = process.env.VUE_APP_SOCIAL_WHATSAPP;
 Vue.prototype.socialLinkGithub = process.env.VUE_APP_SOCIAL_GITHUB;
-Vue.prototype.socialLinkInstagram = process.env.VUE_APP_SOCIAL_INSTAGRAM;
-Vue.prototype.socialLinkFacebook = process.env.VUE_APP_SOCIAL_FACEBOOK;
 
 /* Theme */
 import Argon from "./plugins/argon-kit";
@@ -44,8 +41,7 @@ if (locale === null) {
 
 import VueI18n from 'vue-i18n';
 
-const configuredLanguages = ['en'];
-
+const configuredLanguages = ["en"];
 configuredLanguages.push(...process.env.VUE_APP_ADDITIONAL_LANGUAGES.split(','));
 
 const messages = {};
@@ -53,6 +49,7 @@ const languages = [];
 for (let language of configuredLanguages) {
   try {
     messages[language] = require(`./assets/translations/${language}.json`);
+
     if (messages[language].app.language) {
       languages.push({
         id: language,

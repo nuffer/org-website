@@ -4,8 +4,10 @@ import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 
 import About from "./views/About";
-import Faq from "./views/Faq";
+import Press from "./views/Press";
 import Home from "./views/Home";
+import News from "./views/News";
+import Partnerships from "./views/Partnerships";
 
 Vue.use(Router);
 
@@ -23,11 +25,29 @@ export default new Router({
       }
     },
     {
-      path: "/faq",
-      name: "faq",
+      path: "/press",
+      name: "press",
       components: {
         header: AppHeader,
-        default: Faq,
+        default: Press,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/news",
+      name: "news",
+      components: {
+        header: AppHeader,
+        default: News,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/partnerships",
+      name: "partnerships",
+      components: {
+        header: AppHeader,
+        default: Partnerships,
         footer: AppFooter
       }
     },

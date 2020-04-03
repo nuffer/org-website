@@ -18,19 +18,20 @@
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
 
         <li class="nav-item">
-          <router-link class="nav-link" to="/">
-            {{ $t('report.title') }}
+          <router-link class="nav-link" to="/news">
+            {{ $t('news.title') }}
           </router-link>
         </li>
 
         <li class="nav-item">
-          <router-link class="nav-link" to="/visualize">
-            {{ $t('visualize.title') }}
+          <router-link class="nav-link" to="/press">
+            {{ $t('press.title') }}
           </router-link>
         </li>
+
         <li class="nav-item">
-          <router-link class="nav-link" to="/faq">
-            {{ $t('faq.title') }}
+          <router-link class="nav-link" to="/partnerships">
+            {{ $t('partnerships.title') }}
           </router-link>
         </li>
 
@@ -52,35 +53,6 @@
           <a v-for="language of languages" v-bind:key="language.id" href="" class="dropdown-item"
              @click.prevent="setLocale(language.id)">{{ language.label }}</a>
         </base-dropdown>
-
-        <li v-if="socialLinkWhatsapp" class="nav-item">
-          <a class="nav-link nav-link-icon"
-             :href="`https://wa.me/?text=${$t('app.footer.whatsappshare')} ${socialLinkWhatsapp}`"
-             target="_blank" rel="noopener"
-             data-toggle="tooltip" title="Share on WhatsApp">
-            <i class="fa fa-whatsapp"></i>
-            <span class="nav-link-inner--text d-lg-none">WhatsApp</span>
-          </a>
-        </li>
-
-        <li v-if="socialLinkInstagram" class="nav-item">
-          <a class="nav-link nav-link-icon" :href="socialLinkInstagram" target="_blank"
-             rel="noopener"
-             data-toggle="tooltip" title="Follow us on Instagram">
-            <i class="fa fa-instagram"></i>
-            <span class="nav-link-inner--text d-lg-none">Instagram</span>
-          </a>
-        </li>
-
-        <li v-if="socialLinkFacebook" class="nav-item">
-          <a class="nav-link nav-link-icon" :href="socialLinkFacebook"
-             target="_blank"
-             rel="noopener"
-             data-toggle="tooltip" title="Like us on Facebook">
-            <i class="fa fa-facebook-square"></i>
-            <span class="nav-link-inner--text d-lg-none">Facebook</span>
-          </a>
-        </li>
 
         <li v-if="socialLinkGithub" class="nav-item">
           <a class="nav-link nav-link-icon" :href="socialLinkGithub"
